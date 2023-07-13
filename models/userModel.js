@@ -2,7 +2,7 @@ const mongoose = require('mongoose'); // Erase if already required
 
 const bcrypt=require('bcrypt');
 const crypto = require('crypto');
-const { reset } = require('nodemon');
+const {reset} = require('nodemon');
 // Declare the Schema of the Mongo model
 var userSchema = new mongoose.Schema({
     
@@ -36,10 +36,10 @@ var userSchema = new mongoose.Schema({
         default: "user",
     },
 
-isBlocked:{
+    isBlocked:{
     type: Boolean,
     default: false,
-},
+    },
 
     cart: {
         type: Array,

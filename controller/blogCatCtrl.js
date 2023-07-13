@@ -14,7 +14,7 @@ const createCategory = asyncHandler(async(req, res) => {
 });
 
 //update Product Category
-const updateCategory = asyncHandler(async(req, res) => {
+const updateCategory = asyncHandler(async (req, res) => {
     const {id} = req.params;
     validateMongodbid(id);
     try{

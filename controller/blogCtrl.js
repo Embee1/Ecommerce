@@ -10,8 +10,7 @@ const createBlog = asyncHandler(async(req, res) =>{
     try{
         const newBlog = await Blog.create(req.body);
         res.json(newBlog)
-
-    }
+ }
     catch(error){
         throw new Error(error)
     }
@@ -96,7 +95,7 @@ const likeBlog = asyncHandler(async(req, res)=>{
     //find the login user
     const loginUserId = req?.user?._id;
 
-    //find if the user has liked the blog
+    //find if the user has liked the blog.
     const isliked = blog?.isliked;
 
     // find if the user dislikes the blog
