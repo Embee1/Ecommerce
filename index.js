@@ -38,6 +38,24 @@ app.use(cookieParser());
   app.use(notFound);
   app.use(errorHandler);
 
+
+
+
+
+app.set("view engine", "ejs")
+
+const PUBLISHABLE_KEY = "pk_test_51NTaBfLvXfHMdnxtpWnGr5UbgotJVvRY6ukHrRteImUukZyzeeeMBnWg2MXRshQV1ECgJWXO9TP07NigXiOUC5ma003389MURK"
+ 
+const SECRET_KEY = "sk_test_51NTaBfLvXfHMdnxtyQtt5QqUNcQkzgK4VBqvODW9qHgOUz2avwOcO8xnIqWm0HcR3KumNc3ia0bLGH7JenZ9FH21002xEHFtG2"
+
+app.get('/', (req, res) => {
+  res.render('Home', {
+    key:PUBLISHABLE_KEY
+  })
+})
+
+
+
 app.listen(PORT, () => {
     console.log(`server is running at PORT ${PORT}`);
 });
