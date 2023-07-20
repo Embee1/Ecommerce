@@ -40,7 +40,7 @@ const deleteCategory = asyncHandler(async(req, res) => {
 });
 
 
-//get a catyegory
+//get a Category
 const getACategory = asyncHandler(async(req, res) => {
     const {id} = req.params;
     validateMongodbid(id);
@@ -62,7 +62,4 @@ const getAllCategory = asyncHandler(async(req, res) => {
         throw new Error(error);
     }
 });
-
-
-module.exports = {createCategory , updateCategory, deleteCategory, getACategory,  getAllCategory
-};
+module.exports = {createCategory , updateCategory, deleteCategory, getACategory, getAllCategory};
